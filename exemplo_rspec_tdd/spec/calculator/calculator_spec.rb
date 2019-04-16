@@ -1,6 +1,6 @@
 require 'calculator'
 
-describe Calculator, 'Sobre a calculadora' do
+RSpec.describe Calculator, 'Sobre a calculadora' do
 
   context "#div" do
     it 'raise_error with error class - divided by zero' do
