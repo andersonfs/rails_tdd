@@ -5,7 +5,7 @@ describe 'Atributos' do
 
     before do 
         subject.nome = 'Anderson'
-        subject.idade = 40
+        subject.idade = 40        
     end
 
     it 'have_attributes' do         
@@ -26,5 +26,10 @@ describe 'Atributos' do
 
     it 'have attributes with a_string_starting_witn and a_value >' do 
         expect(subject).to have_attributes(nome: a_string_starting_with("A"), idade: (a_value > 30))  
+    end
+
+    after do 
+        subject.nome = "Sem nome"
+        puts "#{subject.inspect}"
     end
 end

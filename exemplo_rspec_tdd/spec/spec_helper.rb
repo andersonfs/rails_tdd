@@ -17,6 +17,22 @@ require_relative '../helpers/helper'
 
 RSpec.configure do |config|
 
+  config.before(:suite) do
+    puts ">>>>>>>> ANTES DE TODA a suíte de testes"
+  end
+
+  config.after(:suite) do
+    puts ">>>>>>>> DEPOIS DE TODA a suíte de testes"
+  end
+
+  config.before(:context) do
+    puts ">>>>>>>> ANTES DE TODOS os testes"
+  end
+
+  config.after(:all) do
+    puts ">>>>>>>> DEPOIS DE TODOS os testes"
+  end
+
   # Helper methods
   config.include Helper
   # rspec-expectations config goes here. You can use an alternate
