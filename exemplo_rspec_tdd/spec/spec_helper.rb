@@ -16,6 +16,10 @@
 require_relative '../helpers/helper'
 
 RSpec.configure do |config|
+  #forma global de agregar falhas.
+  config.define_derived_metadata do |meta|
+    meta[:aggregate_failures] = true
+  end
 
   config.before(:suite) do
     puts ">>>>>>>> ANTES DE TODA a suíte de testes"
