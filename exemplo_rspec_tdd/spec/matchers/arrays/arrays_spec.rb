@@ -1,6 +1,6 @@
 RSpec::Matchers.define_negated_matcher :exclude, :include
 
-describe Array.new([1,2,3]), "Array" do 
+describe Array.new([1,2,3]), "Array", type: 'arrays' do 
     it '#include - with one item' do 
         expect(subject).to  include(2)
     end
